@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Community Events Portal</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Community Events Portal</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="welcome">
+                    <h2>Upcoming Events</h2>
+                    <div id="errorContainer" class="error-container"></div>
+                    <div id="eventsContainer" class="events-grid"></div>
+                    <div id="noEventsMessage" class="no-events hidden">
+                        <p>No upcoming events available at the moment.</p>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>Join us in making our community stronger!</p>
+            </footer>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

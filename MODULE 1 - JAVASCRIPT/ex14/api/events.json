@@ -1,0 +1,58 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Modern Web Development",
+            "date": "2024-03-15",
+            "seats": 20,
+            "category": "technology",
+            "description": "Learn modern web development techniques and best practices.",
+            "registrations": []
+        },
+        {
+            "id": 2,
+            "name": "UI/UX Fundamentals",
+            "date": "2024-03-20",
+            "seats": 15,
+            "category": "design",
+            "description": "Explore the latest trends in user interface and experience design.",
+            "registrations": []
+        },
+        {
+            "id": 3,
+            "name": "Networking Essentials",
+            "date": "2024-03-25",
+            "seats": 30,
+            "category": "business",
+            "description": "Connect with local entrepreneurs and business leaders.",
+            "registrations": []
+        },
+        {
+            "id": 4,
+            "name": "Jazz Night",
+            "date": "2024-04-01",
+            "seats": 50,
+            "category": "music",
+            "description": "An evening of smooth jazz and great company.",
+            "registrations": []
+        },
+        {
+            "id": 5,
+            "name": "Italian Cuisine",
+            "date": "2024-04-05",
+            "seats": 12,
+            "category": "food",
+            "description": "Learn to cook authentic Italian dishes.",
+            "registrations": []
+        },
+        {
+            "id": 6,
+            "name": "Pottery Making",
+            "date": "2024-04-10",
+            "seats": 8,
+            "category": "arts",
+            "description": "Create beautiful ceramic pieces with expert guidance.",
+            "registrations": []
+        }
+    ]
+}

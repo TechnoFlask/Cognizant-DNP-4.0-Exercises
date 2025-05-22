@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Community Events Portal</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Add jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- Add a note about React/Vue -->
+        <script>
+            // Note: This application could benefit from a modern framework like React or Vue
+            // Benefits would include:
+            // 1. Component-based architecture for better code organization and reusability
+            // 2. Virtual DOM for optimized rendering performance
+            // 3. State management solutions (Redux/Vuex) for complex data flows
+            // 4. Built-in reactivity system for automatic UI updates
+            // 5. Rich ecosystem of plugins and tools
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Community Events Portal</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="layout-grid">
+                    <!-- Left Column: Forms -->
+                    <div class="forms-column">
+                        <!-- Registration Form -->
+                        <section class="form-section">
+                            <h3>Event Registration</h3>
+                            <form id="registrationForm" novalidate>
+                                <input
+                                    type="hidden"
+                                    id="eventId"
+                                    name="eventId"
+                                />
+                                <div class="form-group">
+                                    <label for="regName">Full Name:</label>
+                                    <input
+                                        type="text"
+                                        id="regName"
+                                        name="name"
+                                        required
+                                        minlength="2"
+                                        pattern="[A-Za-z ]{2,}"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="regName"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regEmail">Email:</label>
+                                    <input
+                                        type="email"
+                                        id="regEmail"
+                                        name="email"
+                                        required
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="regEmail"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regPhone">Phone Number:</label>
+                                    <input
+                                        type="tel"
+                                        id="regPhone"
+                                        name="phone"
+                                        pattern="[0-9]{10}"
+                                        placeholder="1234567890"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="regPhone"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            id="regTerms"
+                                            name="terms"
+                                            required
+                                        />
+                                        I agree to the terms and conditions
+                                    </label>
+                                    <div
+                                        class="error-message"
+                                        data-for="regTerms"
+                                    ></div>
+                                </div>
+                                <div class="form-actions">
+                                    <button
+                                        type="submit"
+                                        class="btn"
+                                        id="registerBtn"
+                                    >
+                                        Register
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!-- Add Event Form -->
+                        <section class="form-section">
+                            <h3>Add New Event</h3>
+                            <form id="addEventForm" novalidate>
+                                <div class="form-group">
+                                    <label for="eventName">Event Name:</label>
+                                    <input
+                                        type="text"
+                                        id="eventName"
+                                        name="name"
+                                        required
+                                        minlength="3"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="eventName"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventDate">Date:</label>
+                                    <input
+                                        type="date"
+                                        id="eventDate"
+                                        name="date"
+                                        required
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="eventDate"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventCategory">Category:</label>
+                                    <select
+                                        id="eventCategory"
+                                        name="category"
+                                        required
+                                    >
+                                        <option value="">
+                                            Select a category
+                                        </option>
+                                        <option value="technology">
+                                            Technology
+                                        </option>
+                                        <option value="design">Design</option>
+                                        <option value="business">
+                                            Business
+                                        </option>
+                                        <option value="music">Music</option>
+                                        <option value="food">
+                                            Food & Cooking
+                                        </option>
+                                        <option value="arts">
+                                            Arts & Crafts
+                                        </option>
+                                    </select>
+                                    <div
+                                        class="error-message"
+                                        data-for="eventCategory"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventSeats"
+                                        >Available Seats:</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="eventSeats"
+                                        name="seats"
+                                        min="1"
+                                        required
+                                    />
+                                    <div
+                                        class="error-message"
+                                        data-for="eventSeats"
+                                    ></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventDescription"
+                                        >Description:</label
+                                    >
+                                    <textarea
+                                        id="eventDescription"
+                                        name="description"
+                                        required
+                                        minlength="10"
+                                    ></textarea>
+                                    <div
+                                        class="error-message"
+                                        data-for="eventDescription"
+                                    ></div>
+                                </div>
+                                <div class="form-actions">
+                                    <button
+                                        type="submit"
+                                        class="btn"
+                                        id="addEventBtn"
+                                    >
+                                        Add Event
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+
+                    <!-- Right Column: Events List -->
+                    <div class="events-column">
+                        <section class="welcome">
+                            <h2>Community Events</h2>
+                            <div
+                                id="loadingSpinner"
+                                class="loading-spinner hidden"
+                            >
+                                <div class="spinner"></div>
+                                <p>Loading events...</p>
+                            </div>
+                            <div class="controls">
+                                <div class="search-box">
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search events..."
+                                    />
+                                </div>
+                                <div class="category-filter">
+                                    <select id="categoryFilter">
+                                        <option value="">All Categories</option>
+                                        <option value="technology">
+                                            Technology
+                                        </option>
+                                        <option value="design">Design</option>
+                                        <option value="business">
+                                            Business
+                                        </option>
+                                        <option value="music">Music</option>
+                                        <option value="food">
+                                            Food & Cooking
+                                        </option>
+                                        <option value="arts">
+                                            Arts & Crafts
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="array-operations">
+                                    <button
+                                        id="sortByDateBtn"
+                                        class="btn secondary"
+                                    >
+                                        Sort by Date
+                                    </button>
+                                    <button
+                                        id="sortBySeatsBtn"
+                                        class="btn secondary"
+                                    >
+                                        Sort by Seats
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="array-info">
+                                <div class="info-card">
+                                    <h4>Total Events</h4>
+                                    <div id="totalEvents" class="info-value">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Available Events</h4>
+                                    <div
+                                        id="availableEvents"
+                                        class="info-value"
+                                    >
+                                        0
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Total Capacity</h4>
+                                    <div id="totalCapacity" class="info-value">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="registrationStats"
+                                class="stats-container"
+                            ></div>
+                            <div
+                                id="errorContainer"
+                                class="error-container"
+                            ></div>
+                            <div id="eventsContainer" class="events-grid"></div>
+                            <div id="noEventsMessage" class="no-events hidden">
+                                <p>No events match your criteria.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>Join us in making our community stronger!</p>
+            </footer>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

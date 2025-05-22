@@ -1,0 +1,42 @@
+{
+    "responses": {
+        "registration": {
+            "success": {
+                "status": 200,
+                "message": "Registration successful",
+                "data": {
+                    "confirmationId": "REG-2024-",
+                    "timestamp": null
+                }
+            },
+            "error": {
+                "status": 400,
+                "message": "Registration failed",
+                "errors": [
+                    "Email already registered",
+                    "Invalid phone number format",
+                    "Event is fully booked"
+                ]
+            }
+        },
+        "event": {
+            "success": {
+                "status": 201,
+                "message": "Event created successfully",
+                "data": {
+                    "eventId": null,
+                    "timestamp": null
+                }
+            },
+            "error": {
+                "status": 400,
+                "message": "Failed to create event",
+                "errors": [
+                    "Invalid date format",
+                    "Seats must be greater than 0",
+                    "Description is too short"
+                ]
+            }
+        }
+    }
+}

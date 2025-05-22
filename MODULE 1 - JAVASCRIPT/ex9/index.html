@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Community Events Portal</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Community Events Portal</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="welcome">
+                    <h2>Community Events</h2>
+                    <div id="loadingSpinner" class="loading-spinner hidden">
+                        <div class="spinner"></div>
+                        <p>Loading events...</p>
+                    </div>
+                    <div class="controls">
+                        <div class="search-box">
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search events..."
+                            />
+                        </div>
+                        <div class="category-filter">
+                            <select id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="technology">Technology</option>
+                                <option value="design">Design</option>
+                                <option value="business">Business</option>
+                                <option value="music">Music</option>
+                                <option value="food">Food & Cooking</option>
+                                <option value="arts">Arts & Crafts</option>
+                            </select>
+                        </div>
+                        <div class="array-operations">
+                            <button id="sortByDateBtn" class="btn secondary">
+                                Sort by Date
+                            </button>
+                            <button id="sortBySeatsBtn" class="btn secondary">
+                                Sort by Seats
+                            </button>
+                            <button id="addEventBtn" class="btn primary">
+                                Add Event
+                            </button>
+                        </div>
+                    </div>
+                    <div class="array-info">
+                        <div class="info-card">
+                            <h4>Total Events</h4>
+                            <div id="totalEvents" class="info-value">0</div>
+                        </div>
+                        <div class="info-card">
+                            <h4>Available Events</h4>
+                            <div id="availableEvents" class="info-value">0</div>
+                        </div>
+                        <div class="info-card">
+                            <h4>Total Capacity</h4>
+                            <div id="totalCapacity" class="info-value">0</div>
+                        </div>
+                    </div>
+                    <div id="registrationStats" class="stats-container"></div>
+                    <div id="errorContainer" class="error-container"></div>
+                    <div id="eventsContainer" class="events-grid"></div>
+                    <div id="noEventsMessage" class="no-events hidden">
+                        <p>No events match your criteria.</p>
+                    </div>
+                </section>
+            </main>
+            <div id="addEventModal" class="modal hidden">
+                <div class="modal-content">
+                    <h3>Add New Event</h3>
+                    <form id="addEventForm">
+                        <div class="form-group">
+                            <label for="eventName">Event Name:</label>
+                            <input type="text" id="eventName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Date:</label>
+                            <input type="date" id="eventDate" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="eventCategory">Category:</label>
+                            <select id="eventCategory" required>
+                                <option value="technology">Technology</option>
+                                <option value="design">Design</option>
+                                <option value="business">Business</option>
+                                <option value="music">Music</option>
+                                <option value="food">Food & Cooking</option>
+                                <option value="arts">Arts & Crafts</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventSeats">Available Seats:</label>
+                            <input
+                                type="number"
+                                id="eventSeats"
+                                min="1"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDescription">Description:</label>
+                            <textarea id="eventDescription" required></textarea>
+                        </div>
+                        <div class="modal-actions">
+                            <button type="submit" class="btn">Add Event</button>
+                            <button
+                                type="button"
+                                class="btn secondary"
+                                onclick="closeModal()"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <p>Join us in making our community stronger!</p>
+            </footer>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
