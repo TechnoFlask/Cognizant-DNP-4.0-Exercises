@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Local Community Event Portal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background-color: #f5f6fa;
+            }
+        </style>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header id="mainHeader">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <h1 class="site-title" style="color: red">
+                    Welcome to Our Website
+                </h1>
+            </header>
+
+            <main class="main-content">
+                <section class="hero-section">
+                    <h2>Start Your Journey</h2>
+                    <p class="hero-text">
+                        Experience the best of what we have to offer.
+                    </p>
+                    <button class="cta-button">Get Started</button>
+                </section>
+
+                <div class="eventCard">
+                    <h3>Featured Content</h3>
+                    <p>
+                        This is an example of our beautifully styled content
+                        cards.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Professional Development Workshops</li>
+                        <li>Networking Opportunities</li>
+                        <li>Community Events</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="#" class="content-link">View Schedule</a>
+                        <a href="#" class="content-link">Register Now</a>
+                    </div>
+                    <button class="secondary-button">Learn More</button>
+                </div>
+
+                <div class="eventCard resources-section">
+                    <h3>Additional Resources</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="#" class="resource-link"
+                                >Event Guidelines</a
+                            >
+                            <p>Important information for all participants</p>
+                        </li>
+                        <li>
+                            <a href="#" class="resource-link">FAQ Section</a>
+                            <p>Find answers to common questions</p>
+                        </li>
+                        <li>
+                            <a href="#" class="resource-link"
+                                >Contact Support</a
+                            >
+                            <p>Get help when you need it</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="eventCard admin-section">
+                    <h3>Event Schedule</h3>
+                    <div class="table-container">
+                        <table class="events-table">
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Web Development Workshop</td>
+                                    <td>March 15, 2024</td>
+                                    <td>Room 101</td>
+                                    <td>
+                                        <span class="status-open">Open</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design Meetup</td>
+                                    <td>March 20, 2024</td>
+                                    <td>Main Hall</td>
+                                    <td>
+                                        <span class="status-full">Full</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript Fundamentals</td>
+                                    <td>March 25, 2024</td>
+                                    <td>Room 202</td>
+                                    <td>
+                                        <span class="status-open">Open</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tech Conference 2024</td>
+                                    <td>April 5, 2024</td>
+                                    <td>Convention Center</td>
+                                    <td>
+                                        <span class="status-soon"
+                                            >Coming Soon</span
+                                        >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="eventCard form-section">
+                    <h3>Event Registration</h3>
+                    <form class="registration-form">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="event">Select Event:</label>
+                            <select id="event" name="event" required>
+                                <option value="">Choose an event...</option>
+                                <option value="workshop">
+                                    Web Development Workshop
+                                </option>
+                                <option value="meetup">
+                                    UI/UX Design Meetup
+                                </option>
+                                <option value="js">
+                                    JavaScript Fundamentals
+                                </option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            Register Now
+                        </button>
+                    </form>
+                </div>
+
+                <div class="eventCard news-section">
+                    <h3>Community Bulletin</h3>
+                    <div class="news-content">
+                        <h4>Latest Updates and Announcements</h4>
+                        <p>
+                            Our community continues to grow and thrive with the
+                            addition of new workshops and learning
+                            opportunities. This month, we're excited to announce
+                            several new initiatives that will benefit both
+                            beginners and experienced developers alike.
+                        </p>
+
+                        <p>
+                            The Web Development Workshop series has been a
+                            tremendous success, with over 200 participants
+                            joining our first session. The hands-on approach and
+                            real-world projects have received overwhelmingly
+                            positive feedback. Due to popular demand, we're
+                            adding advanced sessions focusing on modern
+                            frameworks and cloud deployment.
+                        </p>
+
+                        <h4>Upcoming Highlights</h4>
+                        <p>
+                            The UI/UX Design Meetup will feature guest speakers
+                            from leading tech companies, sharing their
+                            experiences and insights about creating
+                            user-centered designs. This is a unique opportunity
+                            to learn from industry experts and network with
+                            fellow designers.
+                        </p>
+
+                        <p>
+                            JavaScript Fundamentals continues to be our most
+                            popular beginner-friendly course. We've updated the
+                            curriculum to include the latest ES2024 features and
+                            best practices. The interactive coding sessions and
+                            peer programming activities have helped participants
+                            build a strong foundation in modern JavaScript
+                            development.
+                        </p>
+
+                        <h4>Community Spotlight</h4>
+                        <p>
+                            We're proud to announce that several of our
+                            community members have secured positions at top tech
+                            companies after participating in our programs. Their
+                            success stories inspire us to continue providing
+                            high-quality educational resources and networking
+                            opportunities.
+                        </p>
+
+                        <p>
+                            The upcoming Tech Conference 2024 promises to be our
+                            biggest event yet. With multiple tracks covering web
+                            development, design, and emerging technologies,
+                            there's something for everyone. Early bird
+                            registration is now open with special discounts for
+                            community members.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="eventCard visibility-demo">
+                    <h3>Visibility Demonstration</h3>
+                    <div class="demo-container">
+                        <div class="demo-item hidden-visibility">
+                            <p>This element uses visibility: hidden</p>
+                        </div>
+                        <div class="demo-item hidden-display">
+                            <p>This element uses display: none</p>
+                        </div>
+                        <p class="demo-explanation">
+                            Notice how visibility: hidden preserves the space
+                            while display: none removes it completely.
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="main-footer">
+                <p>&copy; 2024 Your Company</p>
+            </footer>
+        </div>
+    </body>
+</html>
